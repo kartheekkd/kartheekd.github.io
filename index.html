@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy Birthday, [Your Girlfriend's Name]!</title>
+    <style>
+      /* CSS styles go here */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        color: #333;
+      }
+      header {
+        background-color: #f44336;
+        color: white;
+        text-align: center;
+        padding: 40px;
+        font-size: 30px;
+      }
+      section {
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+      img {
+        max-width: 100%;
+      }
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Happy Birthday, [Your Girlfriend's Name]!</h1>
+    </header>
+    <section>
+      <p>Dear [Your Girlfriend's Name],</p>
+      <p>On this special day, I want to wish you a very happy birthday and let you know how much you mean to me.</p>
+      <p>You light up my world with your beautiful smile, and your kind and loving heart is an inspiration to me every day.</p>
+      <p>Thank you for being my girlfriend and my best friend. I am so grateful to have you in my life, and I look forward to spending many more happy years together.</p>
+      <p>With all my love,<br>[Your Name]</p>
+      <button onclick="playSong()">Play [Your Girlfriend's Name]'s Favorite Song</button>
+      <img src="photo-1.jpg" alt="Photo 1">
+      <img src="photo-2.jpg" alt="Photo 2">
+      <img src="photo-3.jpg" alt="Photo 3">
+    </section>
+    <audio id="song" src="song.mp3"></audio>
+    <script>
+      /* JavaScript code goes here */
+      function playSong() {
+        var song = document.getElementById("song");
+        if (song.paused) {
+          song.play();
+        } else {
+          song.pause();
+        }
+      }
+    </script>
+  </body>
+</html>
