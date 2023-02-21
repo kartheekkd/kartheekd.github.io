@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Happy Birthday</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>Happy Birthday!</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        font-size: 48px;
+        margin-top: 50px;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+        margin-top: 50px;
+        cursor: pointer;
+      }
+      #message {
+        font-size: 24px;
+        margin-top: 50px;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Happy Birthday [Your Girlfriend's Name]!</h1>
-      <img id="birthday-img" src="./ramen.jpg" alt="Happy Birthday">
-      <p id="message">Click on the image to reveal your surprise gift!</p>
-    </div>
-    <script src="script.js"></script>
+    <h1>Happy Birthday!</h1>
+    <img src="./ramen.jpg" alt="Click to see your surprise" id="surprise">
+    <div id="message"></div>
+    <script>
+      var messages = [
+        "Wishing you all the happiness in the world on your special day!",
+        "May your birthday be filled with lots of love, joy, and laughter!",
+        "You're not getting older, you're getting better!",
+        "Here's to another year of good health, happiness, and success!",
+        "May all your dreams and wishes come true on your birthday!",
+      ];
+      
+      var messageDiv = document.getElementById("message");
+      var surpriseImg = document.getElementById("surprise");
+      
+      surpriseImg.addEventListener("click", function() {
+        var randomIndex = Math.floor(Math.random() * messages.length);
+        var randomMessage = messages[randomIndex];
+        messageDiv.innerHTML = randomMessage;
+      });
+    </script>
   </body>
 </html>
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f7c8c8;
-}
-
-h1 {
-  font-size: 3rem;
-  color: #590925;
-}
-
-img {
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  cursor: pointer;
-}
 
 p {
   font-size: 1.5rem;
