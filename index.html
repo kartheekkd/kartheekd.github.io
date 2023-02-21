@@ -26,7 +26,7 @@
   </head>
   <body>
     <h1>Happy Birthday!</h1>
-    <img src="./ramen.jpg" alt="Click to see your surprise" id="surprise">
+    <img src="./komugi.jpg" alt="Click to see your surprise" id="surprise">
     <div id="message"></div>
     <script>
       var messages = [
@@ -48,18 +48,3 @@
     </script>
   </body>
 </html>
-
-p {
-  font-size: 1.5rem;
-  color: #590925;
-  margin-top: 20px;
-}
-const img = document.getElementById("birthday-img");
-const message = document.getElementById("message");
-
-img.addEventListener("click", revealGift);
-
-function revealGift() {
-  img.src = "./komugi.jpg";
-  message.textContent = "Surprise! Happy Birthday! Love you!";
-}
