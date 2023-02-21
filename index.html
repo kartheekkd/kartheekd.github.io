@@ -7,12 +7,14 @@
       body {
         font-family: Arial, sans-serif;
         text-align: center;
+        background-color: #f6d1e7;
       }
       h1 {
         font-size: 48px;
         margin-top: 50px;
       }
       img {
+        position: relative;
         width: 300px;
         height: 300px;
         margin-top: 50px;
@@ -22,29 +24,39 @@
         font-size: 24px;
         margin-top: 50px;
       }
+      #audio {
+        display: none;
+      }
     </style>
   </head>
   <body>
-    <h1>Happy Birthday!</h1>
-    <img src="./komugi.jpg" alt="Click to see your surprise" id="surprise">
+    <h1>Happy Birthday!Taswinieee kutty!!!!!!!</h1>
+    <img src="https://kartheekkd.github.io/kartheekd.github.io/komugi.jpg" alt="Click to see your surprise" id="surprise">
     <div id="message"></div>
+    <audio id="audio" controls>
+      <source src="C:\Users\ASUS\Downloads\Lovely_320(PagalWorld).mp3" type="audio/mpeg">
+    </audio>
     <script>
       var messages = [
-        "Wishing you all the happiness in the world on your special day!",
-        "May your birthday be filled with lots of love, joy, and laughter!",
-        "You're not getting older, you're getting better!",
-        "Here's to another year of good health, happiness, and success!",
-        "May all your dreams and wishes come true on your birthday!",
+        "enna solla therla ,etho enala mudijathuuu senjirukean",
+        "i love youuuu!!! so muchhhhhhh enaku unna rombha pudikum ne enna santhosama feel panna vachrika sogama ellamae na santhosama irukean unkoodha neeyum santhosama iruke nu namburean",
+        "apo apo neriya sanda la podrean ipo koodha theva illatha vai na pesi , paravala intha sandai laa thaandi we are together n we are happieee",
+        "intha distanceuuh tha koncha kadupu ! inum konchaam naal la we can get closee!apo nambha rombha rombha happiee ah irupoamm ",
+        "happy birthday thashuuu!i love youuuuu!!!",
       ];
       
       var messageDiv = document.getElementById("message");
       var surpriseImg = document.getElementById("surprise");
+      var audio = document.getElementById("audio");
       
       surpriseImg.addEventListener("click", function() {
         var randomIndex = Math.floor(Math.random() * messages.length);
         var randomMessage = messages[randomIndex];
         messageDiv.innerHTML = randomMessage;
+        audio.play();
       });
     </script>
   </body>
 </html>
+
+
